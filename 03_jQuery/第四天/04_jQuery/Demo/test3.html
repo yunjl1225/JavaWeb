@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            //attr()
+            alert( $(":checkbox:first").attr("name") ); // 获取第一个复选框的name属性名
+            $(":checkbox:first").attr("name","abc") ; // 设置name属性名
+
+            //获取选中框,如果没有默认选中的话就会返回undefined
+            alert($(":checkbox").attr("checked"));
+            // 官方觉得返回undefined是一个错误，所以使用了prop()
+            alert($(":checkbox").prop("checked")); //没有选中返回false，选中返回true
+
+            $(":checkbox:first").attr("abc","abcValue");  //创建并设置自定义属性和数据
+            alert( $(":checkbox:first").attr("abc") );    //获取自定义属性
+
+          //将<h1>标题1</h1>插入到<div>中，成为最后一个子元素
+          $("<h1>标题1</h1>").appendTo( "div");
+          //或者使用$()查询
+          //将<h1>标题2</h1>插入到<div>中，成为最后一个子元素
+          $("<h1>标题2</h1>").appendTo( $("div") );
+          //将<h1>标题3</h1>插入到<div>中，成为第一个子元素
+          $("<h1>标题3</h1>").prependTo( $("div") );
+          //将<h1>标题4</h1>插入到<div>后面
+          $("<h1>标题4</h1>").insertAfter("div");
+          //将<h1>标题5</h1>插入到<div>前面
+          $("<h1>标题5</h1>").insertBefore("div");
+
+
+          //用<h1>标题</h1>替换掉所有的div
+          $("div").replaceWith( $("<h1>标题</h1>") );
+
+          //用<h1>标题</h1>替换掉每个div
+          $("<h1>标题</h1>").replaceAll( "div" );
+          //删除 div 标签
+          $("div").remove();
+          //清空 div 标签里的内容
+          $("div").empty();
+        });
+    </script>
+</head>
+<body>
+<body>
+    <br/>
+    多选：
+    <input name="checkbox" type="checkbox" checked="checked" value="checkbox1" />checkbox1
+    <input name="checkbox" type="checkbox" value="checkbox2" />checkbox2
+    <br/><br/>
+    <div>1234</div>
+    <div>1234</div>
+</body>
+</body>
+</html>

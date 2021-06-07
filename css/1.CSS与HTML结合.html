@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+<!--
+  style标签专门用来定义CSS样式代码 (标签里面的代码就是CSS代码)
+-->
+  <style type="text/css">
+      div{
+        border: 1px solid red;       /* 边框1个像素，实线，红色。*/
+      }
+      span{
+        border: 1px solid red;       /* 边框1个像素，实线，红色。*/
+      }
+  </style>
+
+  <link rel="stylesheet" type="text/css" href="1.css">  <!--方式三：引入css样式代码-->
+</head>
+<body>
+<!--
+
+
+需求 1：分别定义两个 div、span 标签，分别修改每个 div 标签的样式为：边框 1 个像素，实线，红色。
+方式一：
+    直接在属性中声明,太繁琐，代码复用率不高
+    <span style="border: 1px solid red;">span 标签 2</span>
+方式二：
+利用CSS代码,只能在当前页面使用，不能跨页面使用
+   <style type="text/css">
+        span{
+          border: 1px solid red;       /* 边框1个像素，实线，红色。*/
+        }
+    </style>
+方式三：
+    把CSS样式携程一个单独的CSS文件，在通过<link />标签引用
+
+-->
+
+<div style="border: 1px solid red;">div 标签 1</div>    <!--方式一-->
+<div>div 标签 2</div>                                   <!--方式二-->
+<span>span 标签 1</span>
+<span>span 标签 2</span>
+
+
+
+
+
+</body>
+</html>

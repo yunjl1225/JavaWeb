@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<>
+  <meta charset="UTF-8">
+  <title>Title</title>
+ <!-- base标签可以设置当前页面中所有相对路径工作时，参照哪个路径来进行跳转
+          href 属性是参照的地址值
+ -->
+  <base href="http://localhost:8080/06_Servlet/a/b/c.html">
+<!--  c.html文件名可以省略   http://localhost:8080/06_Servlet/a/b/ -->
+
+</head>
+<body>
+这是a下的b下的c.html文件<br/>
+<!--此处使用的是相对路径，如果使用请求转发跳转到此页面，则不能跳转回去-->
+<a href="../../index.html">相对路径跳回首页</a>  <br/>
+<a href="http://localhost:8080/06_Servlet/index.html">绝对路径跳回首页</a>    <!--可以跳转回去--><br/>
+
+<!--使用base标签设置了相对路径之后，可以跳转回去-->
+<a href="../../index.html">相对路径跳回首页</a>  <br/>
+</body>
+</html>

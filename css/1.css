@@ -1,0 +1,7 @@
+/*CSS样式代码*/
+div{
+  border: 1px solid red;       /* 边框1个像素，实线，红色。*/
+}
+span{
+  border: 1px solid red;       /* 边框1个像素，实线，红色。*/
+}

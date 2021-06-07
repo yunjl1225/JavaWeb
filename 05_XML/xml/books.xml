@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+      <?xml version="1.0" encoding="utf-8" ?>
+      是XML文件的声明
+      version="1.0"       version 表示XML的版本
+      encoding="utf-8"    encoding表示XML文件本身的编码
+-->
+<books>     <!--books表示多个图书信息-->
+  <bookDao sn="SN12565598">        <!--book表示一个图书的信息，sn表示图书的序列号-->
+      <name>时间简史</name>      <!--name表示书名-->
+      <author>霍金</author>      <!--author表示作者-->
+      <price>45</price>          <!--price表示价格-->
+  </bookDao>
+  <bookDao sn="SN1256523425598">        <!--book表示一个图书的信息，sn表示图书的序列号-->
+      <name>java从入门到入土</name>      <!--name表示书名-->
+      <author>云</author>      <!--author表示作者-->
+      <price>5</price>          <!--price表示价格-->
+    <![CDATA[
+        这里的数据不会被解析
+    ]]>
+  </bookDao>
+</books>

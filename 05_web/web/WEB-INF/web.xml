@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+  <!--servlet标签给Tomcat服务器配置servlet程序-->
+  <servlet>
+    <!--servlet-name标签给servlet程序起一个别名（一般是类名）-->
+    <servlet-name>HelloServlet</servlet-name>
+    <!--servlet-class标签是servlet程序的全类名-->
+    <servlet-class>yun.Servlet.HelloServlet</servlet-class>
+  </servlet>
+
+  <!--servlet-mapping标签给servlet程序配置访问地址-->
+  <servlet-mapping>
+    <!--servlet-name标签的作用是：告诉服务器，我当前配置的地址给哪个servlet程序使用-->
+    <servlet-name>HelloServlet</servlet-name>
+    <!--url-pattern配置访问地址
+            /          在服务器解析的时候，表示地址为 http://ip:port/工程路径     （本模块工程路径为  /05_web）
+            hello      表示地址为:    http://ip:port/工程路径/hello
+
+    -->
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+
+</web-app>
